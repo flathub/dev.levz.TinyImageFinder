@@ -1,6 +1,6 @@
 app-id: dev.levz.TinyImageFinder
 runtime: org.kde.Platform
-runtime-version: '6.7'
+runtime-version: '6.9'
 sdk: org.kde.Sdk
 command: image-finder
 finish-args:
@@ -14,6 +14,7 @@ modules:
   - name: image-finder
     buildsystem: cmake-ninja
     sources:
-      - type: archive
-        url: https://github.com/guylamar2006/tiny-image-finder/archive/refs/tags/v0.1.3.tar.gz
-        sha256: c08a68c35b8c7eeaf36a0d89fbb499c458bea4931458fd690cb54181e1c81ad7
+      - type: git
+        url: https://github.com/sergey-levin/tiny-image-finder
+        # Since there is no new release tag, use the latest commit instead.
+        commit: 90aeadc9af89cb550f3dcf736ad8b1f370e07ca2
