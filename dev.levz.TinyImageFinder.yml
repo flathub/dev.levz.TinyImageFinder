@@ -1,6 +1,6 @@
 app-id: dev.levz.TinyImageFinder
 runtime: org.kde.Platform
-runtime-version: '6.9'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: image-finder
 finish-args:
@@ -18,3 +18,5 @@ modules:
         url: https://github.com/sergey-levin/tiny-image-finder
         # Since there is no new release tag, use the latest commit instead.
         commit: 90aeadc9af89cb550f3dcf736ad8b1f370e07ca2
+      - type: patch
+        path: fix-build-errors.patch
