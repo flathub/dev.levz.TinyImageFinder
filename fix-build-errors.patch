@@ -1,0 +1,27 @@
+From 56ae6116a4b537ddb624a8e4459cc90a42f2da79 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Tue, 2 Jun 2026 20:12:49 +0300
+Subject: [PATCH] Fix build errors
+
+`error: ‘QElapsedTimer’ was not declared in this scope; did you mean ‘QBasicTimer’?`
+
+Signed-off-by: Sabri Ünal <yakushabb@gmail.com>
+---
+ imagefinder.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/imagefinder.cpp b/imagefinder.cpp
+index a35ce8f..5b23aa6 100644
+--- a/imagefinder.cpp
++++ b/imagefinder.cpp
+@@ -27,6 +27,7 @@ along with Image Finder. If not, see <https://www.gnu.org/licenses/gpl-3.0.txt>.
+ #include <QDirIterator>
+ #include <QImageReader>
+ #include <QTimer>
++#include <QElapsedTimer>
+ #include <QThreadPool>
+ 
+ namespace {
+--
+libgit2 1.7.2
+
